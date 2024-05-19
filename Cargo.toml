@@ -3,8 +3,15 @@ name = "executor"
 version = "0.1.0"
 edition = "2021"
 authors = ["Fangliang Zhao <1491657576@qq.com>"]
-description = "An out-of-the-box executor that can be used in multiple operating systems"
+description = "An out-of-the-box async/await executor that can be used in multiple operating systems"
 license = "MIT"
 repository = "https://github.com/AsyncModules/executor"
+categories = [
+    "embedded",
+    "no-std",
+    "asynchronous",
+]
 
 [dependencies]
+crossbeam = { version = "0.8", default-features = false, features = ["alloc"] }
+log = { version = "0.4", optional = true }
